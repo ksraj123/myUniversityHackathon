@@ -75,6 +75,7 @@ app.post("/sbh/register", function(req, res){
 							res.send("<h1>Email id " + req.body.email + " is already registered!</h1>");
 						} else {
 							saveToDb(req.body);
+							res.send("<h1> Team saved to Database </h1>")
 						}
 					}
 				});
@@ -90,7 +91,7 @@ app.post("/sbh/register", function(req, res){
 function saveToDb(obj){
 
 	var teamToBeAdded = new Team({
-		teamName: req.body.teamName,
+		teamName: obj.teamName,
 		collegeName: obj.collegeName,
 		collegeID: obj.collegeId,
 		teamLeader: obj.teamLeader,
