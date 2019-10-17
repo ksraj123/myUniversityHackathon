@@ -19,6 +19,7 @@ var teamSchema = new mongoose.Schema({
 	member3: String,
 	phnNo: String,
 	Email: String,
+	password: String,
 	ideaTitle: String,
 	ideaLink: String,
 	ideaAbstract: String
@@ -70,8 +71,7 @@ app.post("/sbh/register", function(req, res){
 						if (team1.length != 0){
 							res.render("emailError", {email: req.body.email});
 						} else {
-							saveToDb(req.body);
-							res.send("<h1> Team saved to Database </h1>")
+							saveToDb(req.body, res);
 						}
 					}
 				});
@@ -81,7 +81,8 @@ app.post("/sbh/register", function(req, res){
 });
 
 
-function saveToDb(obj){
+function saveToDb(obj, res){
+	var pass = Math.floor(Math.random() * 100000000);
 	var teamToBeAdded = new Team({
 		teamName: obj.teamName,
 		collegeName: obj.collegeName,
@@ -92,6 +93,7 @@ function saveToDb(obj){
 		member3: obj.teamMember3,
 		phnNo: obj.phoneNumer,
 		Email: obj.email,
+		password: pass,
 		ideaTitle: obj.ideaTitle,
 		ideaLink: obj.ideaLink,
 		ideaAbstract: obj.abstract
@@ -102,6 +104,9 @@ function saveToDb(obj){
 		} else {
 			console.log("We just saved a team to the databse");
 			console.log(teamSaved);
+			res.render("sucessfulRegisteration", {username: teamSaved.Email, 
+				password: teamSaved.password, teamLead: teamSaved.teamLeader,
+				college: teamSaved.collegeName, ideaTitle: teamSaved.ideaTitle});
 		}
 	})
 }
