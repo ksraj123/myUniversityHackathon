@@ -1,0 +1,503 @@
+* {
+	box-sizing: border-box;
+}
+
+#login-menu{
+	width: 50vw;
+	max-width: 300px;
+	padding: 10px 10px;
+}
+
+.typewriter h1 {
+  font-family: 'Megrim', cursive;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 7s steps(40, end) infinite,
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  30% {width: 0; }
+  100% {width: 100%;}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+
+#upDown{
+	position: fixed;
+	bottom: 5vh;
+	right: 10vw;
+	font-size: 2em;
+	color: rgb(102,157,189);
+	display: none;
+	transition: all 1s linear;
+}
+
+#upBtn{
+	margin-bottom: 20px;
+}
+
+#upBtn, #downBtn{
+	background-color: white;
+	border-radius: 50%;
+	line-height: 1;
+}
+
+.disableScroll {
+	height: 100%;
+	overflow: hidden;
+}
+
+.clickableNavItm{
+	cursor: pointer;
+}
+
+
+#welcomeAni {
+	position: fixed;
+	opacity: 1;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100vw;
+	height: 100vh;
+	background-color: white;
+	transition: opacity 1s ease;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#welcomeAni img{
+	width: 30vh;
+}
+
+.fa{
+	font-weight: 200;
+	font-size: 0.5em;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#welcomeAni p {
+	text-align: center;
+	font-size: 1.4em;
+	color: #669dbd;
+}
+
+#welcomeAni p * {
+	opacity: 0;
+	animation-name: tbl;
+	animation-iteration-count: 2;
+	animation-fill-mode: forwards;
+}
+
+#think{
+	animation-duration: 5s;
+	animation-delay: 0s;
+}
+
+.firstCircle{
+	animation-duration: 4s;
+	animation-delay: 1s;
+}
+
+#build{
+	animation-duration: 3s;
+	animation-delay: 2s;
+}
+
+.secondCircle{
+	animation-duration: 2s;
+	animation-delay: 3s;
+}
+
+#learn{
+	animation-duration: 1s;
+	animation-delay: 4s;
+}
+
+@keyframes tbl{
+	0%{
+		opacity: 0;
+	}
+	100%{
+			opacity: 1;
+		}
+	}
+
+
+.overlay {
+	z-index: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background-color: black;
+	opacity: 0.3;
+}
+
+@-webkit-keyframes backgroundScroll {
+    from {background-position: 0 0;}
+    to {background-position: -3177px 0px;}
+}
+
+body {
+	padding-top: 70px;
+	font-size: 2em;
+    background-image: url('movingback.png');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    /*-webkit-animation: backgroundScroll 50s linear infinite;
+    -webkit-animation-fill-mode: both;
+    animation: backgroundScroll 50s linear infinite;
+    animation-fill-mode: both;*/
+}
+
+.navbar-brand{
+	font-size: 1.35em;	
+}
+
+#navLogo {
+	height: 2em;
+	margin: 0.3em;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    /* color: #555; */
+    background-color: #669dbd;
+    color: white;
+    transition: background-color 0.4s ease-in;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: white;
+    background-color: #669dbd;
+    transition: background-color 0.4s ease-in;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    background-color: #669dbd;
+    color: white;
+    transition: background-color 0.4s ease-in;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+	background-color: #669dbd;
+    color: white;
+    transition: background-color 0.4s ease-in;
+
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+	background-color: #669dbd;
+    color: white;
+    transition: background-color 0.4s ease-in;
+
+}
+
+.navbar-toggle:focus .icon-bar {
+	background-color: white;
+    transition: background-color 0.4s ease-in;
+
+}
+
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+	max-height: 20em;
+}
+
+.banner {
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.bannerContent{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	opacity: 0.9;
+	background-color: white;
+	font-family: 'Raleway', sans-serif;
+	color: #777777;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+}
+
+.banner img {
+	max-width: 1000px;
+	width: 90%;
+	flex: none;
+}
+
+.page, .pageIgnoreScroll {
+	/*min-height: 95vh;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 0;
+}
+
+.innerPage {
+	height: 100%;
+	width: 100%;
+	max-width: 1300px;
+	padding: 5vh 5vw;
+}
+
+.innerPage h1 {
+	font-weight: 600;	
+	text-align: center;
+	font-size: 1.9em;
+	margin-bottom: 4vh;
+}
+
+.innerPage p {
+	text-align: justify;
+	font-size: 120%;
+	
+}
+
+.white {
+	background-color: rgba(255, 255, 255, 0.9);
+	/*opacity: 0.9;*/
+}
+
+.white h1{
+	color: rgb(102,157,189);
+}
+
+.timelineInfo{
+	display: flex;
+	justify-content: center;
+}
+
+#timelineGraphics{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.timelineText{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-left: 3vw;
+	font-size: 120%;
+}
+
+.blueCircle{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(102,157,189);
+	color: white;
+	font-size: 5vh;
+	width: 10vh;
+	height: 10vh;
+	border-radius: 5vh;
+}
+
+.smallCircle{
+	font-size: 3vh;
+	width: 6vh;
+	height: 6vh;
+	border-radius: 3vh;
+}
+
+.blueLine{
+	width: 1vh;
+	height: 5vh;
+	background-color: rgb(102,157,189);
+}
+
+.majorEv, .minorEv{
+	display: flex;
+	align-items: center;
+}
+
+.majorEv{
+	height: 10vh;
+}
+
+.minorEv{
+	height: 6vh;
+}
+
+.blankEv{
+	height: 5vh;
+}
+
+.blue{
+	background-color: rgba(102,157,189,0.9);
+	color: white;
+}
+
+.blue img{
+	margin: 20px;
+}
+
+.navbar {
+	min-height: 5vh;
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: 1150px){
+
+	body {
+		font-size: 530%;
+		background-size: 2000px 700px;
+	}
+
+	#login-menu{
+		width: 60vw;
+		max-width: 60vw;
+		padding: 20px 20px;
+		font-size: 0.8em;
+		line-height: 1.6;
+	}
+
+	.form-control{
+		font-size: 0.7em;
+		height: 2em;
+	}
+
+	#signIn{
+		font-size: 0.8em;
+	}
+
+	#signIn:hover{
+		background: white;
+		color: #337AB7;
+	}
+
+	#robo{
+		display: block;
+	}
+
+	#upDown{
+		display: block;
+	}
+
+	.prize{
+		width: 90%;
+	}
+
+	.prizeList{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.innerPage h1 {
+		font-size: 1.35em;
+	}
+
+	.innerPage p {
+		font-size: 100%;
+	}
+
+	.timelineText{
+		font-size: 100%;
+	}
+
+	.bannerContent h1{
+		font-size: 1em;
+	}
+
+	.bannerContent h2{
+		font-size: 0.7em;
+	}
+
+	.navbar-brand{
+		height: 1.3em;
+		padding: 0.85em 0.3em;
+		/*padding: 0.175em 0.175em;*/
+	}
+	.navbar-nav>li>a {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    line-height: 2em;
+    font-size: 1em;
+	}
+	.dropdown-menu>li>a {
+		padding: 0.5em 0.6em;
+		font-size: 2.35em;
+	}
+	.navbar-toggle {
+		padding: 0.5em 0.5em;
+		margin-top: 0.7em;
+	}
+	.navbar-toggle .icon-bar {
+		width: 0.8em;
+		height: 0.15em;
+	}
+	.navbar-toggle .icon-bar+.icon-bar {
+		margin-top: 0.12em;
+	}
+}
+
+
+/*changing navbar breakpoint*/
+/*=====================================================================*/
+
+@media (max-width: 1150px) {
+
+.navbar-right .dropdown-menu {
+    right: auto;
+    left: 0;
+}
+
+.navbar-header {
+    float: none;
+}
+.navbar-left,.navbar-right {
+    float: none !important;
+}
+.navbar-toggle {
+    display: block;
+}
+.navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+    position: fixed !important;
+}
+.navbar-collapse.collapse {
+    display: none!important;
+}
+.navbar-nav {
+    float: none!important;
+    margin-top: 7.5px;
+}
+.navbar-nav>li {
+    float: none;
+}
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.collapse.in{
+    display:block !important;
+}
+}
+
+/*===========================================================================*/
+/*navbar breakpoint changed*/

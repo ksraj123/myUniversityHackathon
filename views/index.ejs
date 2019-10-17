@@ -1,0 +1,183 @@
+<% include partials/header %>
+
+<body>
+
+	<script type="text/javascript">
+		console.log("here");
+		document.querySelector("body").classList.add("disableScroll");
+	</script>
+
+	<div id="welcomeAni" style="position: fixed; width: 100vw; height: 100vh; opacity = 1;
+	background-color: white; display: flex; justify-content: center; flex-direction: column; align-items: center;">
+		<img src="/css/transparent-integrations-animated.gif">
+		<p style="display: flex; align-items: center;">
+			<span id="think">Think</span>
+			<i class="fa fa-circle firstCircle" aria-hidden="true"></i>
+			<span id="build">Build</span>
+			<i class="fa fa-circle secondCircle" aria-hidden="true"></i>
+			<span id="learn">Learn</span>
+		</p>
+	</div>
+
+	<script src="/resources/jQuery.js"></script>
+	<script type="text/javascript" src="/js/script.js"></script>
+
+	<!-- <button id="moveToTop"> Move to top </button> -->
+	<div id="upDown">
+		<div id="upBtn"><i class="fas fa-chevron-circle-up"></i></div>
+		<div id="downBtn"><i class="fas fa-chevron-circle-down"></i></div>
+	</div>
+
+	<div id="overlay"></div>
+
+	<% include partials/navbar %>
+
+	<div class="banner">
+		<div class="bannerContent">
+			<img src="/visuals/bceLogo.png" style="width: 15%;">
+			<h1>Bhagalpur College of Engineering</h1>
+			<h2>Presents</h2>
+			<img src="/visuals/banner.gif">
+			<div id="robo">
+				<div class="cuteRobo" style="display: flex; justify-content: space-between; width: 80vw;">
+					<img src="/visuals/cuteRoboSmall.gif" style="width: 20vw; max-width: 300px">
+					<div class="cuteRoboText" style="display: flex; align-items: center; margin-left: 5vw;">
+						<div class="typewriter">
+	  						<h1>EAT<i class="fas fa-coffee"></i>SLEEP<i class="fas fa-code"></i>CODE</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="aboutSbh" class="container-fluid page white">
+		<div class="container innerPage">
+			<h1>About SBH</h1>
+			<p> <% include text/aboutSbh %> </p>
+		</div>
+	</div>
+	
+	<div id="aboutTheInst" class="container-fluid page blue">
+		<div class="container innerPage">
+			<h1>About the Institution</h1>
+			<p style="text-align: center"> <img src="/visuals/bceFront.jpg"> </p>
+			<p> <% include text/aboutTheInstitution %> </p>
+		</div>
+	</div>
+
+	<div id="timeline" class="container-fluid page white">
+		<div class="container innerPage" style="display: flex; justify-content: center; flex-direction: column;">
+			<h1>Timeline</h1>
+			<div class="timelineInfo">
+				<div id="timelineGraphics">
+					<div class="blueCircle">
+						<i class="fas fa-keyboard"></i>
+					</div>
+					<div class="blueLine"></div>
+					<div class="blueCircle smallCircle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+					<div class="blueLine"></div>
+					<div class="blueCircle smallCircle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+					<div class="blueLine"></div>
+					<div class="blueCircle">
+						<i class="fas fa-address-card"></i>
+					</div>
+					<div class="blueLine"></div>
+					<div class="blueCircle smallCircle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+					<div class="blueLine"></div>
+					<div class="blueCircle smallCircle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+					<div class="blueLine"></div>
+					<div class="blueCircle">
+						<i class="fas fa-laptop-code"></i>
+					</div>
+				</div>
+				<div class="timelineText">
+					<div class="majorEv">Online Idea Submission</div>
+					<div class="blankEv"></div>
+
+					<div class="minorEv">Start Date - Not finalised </div>
+					<div class="blankEv"></div>
+					
+					<div class="minorEv">Deadline - Not finalised</div>
+					<div class="blankEv"></div>
+					
+
+					<div class="majorEv">Idea Screening</div>
+					<div class="blankEv"></div>
+					
+
+					<div class="minorEv">Screening Results - Not finalised</div>
+					<div class="blankEv"></div>
+					
+
+					<div class="minorEv">Confirm Participation - Not finalised</div>
+					<div class="blankEv"></div>
+					
+
+					<div class="majorEv">SBH begins - Not finalised</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="prizes" class="container-fluid page blue">
+		<div class="container innerPage">
+			<h1>Prizes</h1>
+			<div class="prizeList" style="display: flex; justify-content: space-between;">
+				<div class="prize" style="display: flex; flex-direction: column; align-items: center; width:25% ">
+					<img src="/visuals/first.png">
+					<h1><i class="fas fa-rupee-sign"></i> 25,000</h1>					
+				</div>
+				<div class="prize" style="display: flex; flex-direction: column; align-items: center; width:25%">
+					<img src="/visuals/second.png">	
+					<h1><i class="fas fa-rupee-sign"></i> 15,000</h1>				
+				</div>
+				<div class="prize" style="display: flex; flex-direction: column; align-items: center; width:25%">
+					<img src="/visuals/third.png">			
+					<h1><i class="fas fa-rupee-sign"></i> 10,000</h1>		
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="timeline" class="container-fluid page white">
+		<div class="container innerPage">
+			<h1>Team</h1>
+		</div>
+	</div>
+
+	<div id="prizes" class="container-fluid page blue">
+		<div class="container innerPage">
+			<h1>Rules and Guidelines</h1>
+		</div>
+	</div>
+
+	<div id="timeline" class="container-fluid page white">
+		<div class="container innerPage">
+			<h1>FAQ</h1>
+		</div>
+	</div>
+
+	<div id="prizes" class="container-fluid page blue">
+		<div class="container innerPage">
+			<h1>Contact</h1>
+		</div>
+	</div>
+
+	<div id="timeline" class="container-fluid page white">
+		<div class="container innerPage">
+			<h1>Sponsors</h1>
+		</div>
+	</div>
+
+	
+<% include partials/footer %>

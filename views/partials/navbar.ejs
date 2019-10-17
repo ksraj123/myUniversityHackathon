@@ -1,0 +1,68 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+	<script type="text/javascript">
+		$("nav").removeClass("navbar-fixed-top");
+	</script>
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button id="hamburger" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+				data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<img id="navLogo" src="/visuals/smallbcelogo.png" height="100%" style="float: left;">
+			<a class="navbar-brand" href="#">BCE Bhagalpur</a>
+		</div>
+
+
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+			<ul class="nav navbar-nav">
+				<li class="clickableNavItm"><a>About <span class="sr-only">(current)</span></a></li>
+				<li class="clickableNavItm"></li>
+				<li class="clickableNavItm"><a>Timeline</a></li>
+				<li class="clickableNavItm"><a>Prizes</a></li>
+				<li class="clickableNavItm"><a>Team</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false">More <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li class="clickableNavItm"><a>Rules and Guidelines</a></li>
+						<li class="clickableNavItm"><a>FAQ</a></li>
+
+						<li role="separator" class="divider"></li>
+						<li class="clickableNavItm"><a>Contact</a></li>
+						<li role="separator" class="divider"></li>
+						<li class="clickableNavItm"><a>Sponsors</a></li>
+					</ul>
+				</li>
+				<li><a href="#"></a></li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false">Login <span class="caret"></span></a>
+					<ul id="login-menu" class="dropdown-menu">
+						
+						<form>
+							<div class="form-group">
+								<label for="exampleDropdownFormEmail1">Email address</label>
+								<input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Enter email here">
+							</div>
+							<div class="form-group">
+								<label for="exampleDropdownFormPassword1">Password</label>
+								<input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Enter password">
+							</div>
+							<button id="signIn" type="submit" class="btn btn-primary">Sign in</button>
+						</form>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/sbh/register">New around here? Sign up</a>
+					</ul>
+				</li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>

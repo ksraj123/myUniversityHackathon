@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Smart BCE Hackathon</title>
+	<meta name="Developer" content="Kumar Saurabh Raj">
+	<link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="resources/jQuery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Megrim&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="resources/fontAwesome/all.min.css">
+</head>
+
+<body>
+	<!-- <button id="moveToTop"> Move to top </button> -->
+
+	<script type="text/javascript">
+		console.log("here");
+		$("body").addClass("disableScroll");
+	</script>
+	<div id="welcomeAni">
+		<img src="css/transparent-integrations-animated.gif">
+		<p style="display: flex; align-items: center;">
+			<span id="think">Think</span>
+			<i class="fa fa-circle firstCircle" aria-hidden="true"></i>
+			<span id="build">Build</span>
+			<i class="fa fa-circle secondCircle" aria-hidden="true"></i>
+			<span id="learn">Learn</span>
+		</p>
+	</div>
+
+	<div id="upDown">
+		<div id="upBtn"><i class="fas fa-chevron-circle-up"></i></div>
+		<div id="downBtn"><i class="fas fa-chevron-circle-down"></i></div>
+	</div>
+
+	<div id="overlay"></div>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<script type="text/javascript">
+			$("nav").removeClass("navbar-fixed-top");
+		</script>
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button id="hamburger" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<img id="navLogo" src="visuals/smallbcelogo.png" height="100%" style="float: left;">
+				<a class="navbar-brand" href="#">BCE Bhagalpur</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+				<ul class="nav navbar-nav">
+					<li class="clickableNavItm"><a>About <span class="sr-only">(current)</span></a></li>
+					<li class="clickableNavItm"></li>
+					<li class="clickableNavItm"><a>Timeline</a></li>
+					<li class="clickableNavItm"><a>Prizes</a></li>
+					<li class="clickableNavItm"><a>Team</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">More <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li class="clickableNavItm"><a>Rules and Guidelines</a></li>
+							<li class="clickableNavItm"><a>FAQ</a></li>
+
+							<li role="separator" class="divider"></li>
+							<li class="clickableNavItm"><a>Contact</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="clickableNavItm"><a>Sponsors</a></li>
+						</ul>
+					</li>
+					<li><a href="#"></a></li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">Login <span class="caret"></span></a>
+						<ul id="login-menu" class="dropdown-menu">
+							<form>
+							    <div class="form-group">
+							      <label for="exampleDropdownFormEmail1">Email address</label>
+							      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Enter email here">
+							    </div>
+							    <div class="form-group">
+							      <label for="exampleDropdownFormPassword1">Password</label>
+							      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Enter password">
+							    </div>
+							    <button id="signIn" type="submit" class="btn btn-primary">Sign in</button>
+							  </form>
+							  <div class="dropdown-divider"></div>
+							  <a class="dropdown-item" href="#">New around here? Sign up</a>
+						</ul>
+					</li>
+				</ul>
+
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+
+
+	<div class="banner">
+		<div class="bannerContent">
+			<img src="visuals/bceLogo.png" style="width: 15%;">
+			<h1>Bhagalpur College of Engineering</h1>
+			<h2>Presents</h2>
+			<img src="visuals/banner.gif">
+			<div id="robo">
+				<div class="cuteRobo" style="display: flex; justify-content: space-between; width: 80vw;">
+					<img src="visuals/cuteRoboSmall.gif" style="width: 20vw; max-width: 300px">
+					<div class="cuteRoboText" style="display: flex; align-items: center; margin-left: 5vw;">
+						<div class="typewriter">
+	  						<h1>EAT<i class="fas fa-coffee"></i>SLEEP<i class="fas fa-code"></i>CODE</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="aboutSbh" class="container-fluid page white">
+		<div class="container innerPage">
+			<h1>About SBH</h1>
+			<p>Smart B.C.E. Hackathon 2019 is a fascinating event of B.C.E. Bhagalpur which symbolizes the ever-growing enthusiasm of the student fraternity to be grander more majestic and more innovative than ever before and scale new peaks of success in holistic entrepreneurship and break the set records of academic thoughts filled society which is constantly adding a new meaning to its existence. A splendor tailored for the youth of today, which gives them a platform to showcase their technical acumen, business understanding, co-curricular skills, team spirit and provides them with a peak into the present day corporate culture. SBH 19 can rightly be titled the spirit of B.C.E. Bhagalpur. It is of equal pride for us to say that S.B.H. would see the amalgamation of youth from all across the nation in forthcoming years so this event can be tagged as a celebration of vibrancy in the state of Bihar and all over the country.
+			</p>
+		</div>
+	</div>
+	<div id="aboutTheInst" class="container-fluid page blue">
+		<div class="container innerPage">
+			<h1>About the Institution</h1>
+			<p style="text-align: center">
+				<img src="visuals/bceFront.jpg">
+			</p>
+			<p>
+				Bhagalpur College of Engineering(B.C.E), Bhagalpur was set up by the Department Of Science and Technology, Government of Bihar in the year 1960 with a view to providing efficient system of technical education in Bihar.Earlier, the affiliation was under Tilkamanjhi Bhagalpur University (TMBU) Bhagalpur, BIHAR which was later passed on to Aryabhatta Knowledge University (AKU), Patna which was established by the government of Bihar, under Bihar Act 24, 2008. BCE is administered by the Department of Science and Technology under the guidance of the government of Bihar.Since the inception of this seat of learning, it has moved ahead with the singular aim of training the students in the field of science and technology, not only the theoretical instructions scattered in hundreds of engineering books but also the pragmatic, down-to-earth practical solutions of the innumerable Engineering problems faced by the working technocrats in various Industries, R&D cells and Govt. departments. About 5000 Alumni, contributing to the cause of science and technology in India and abroad in many important capacities, speak of the glorious tradition of B.C.E the justification that quantity dulls the edge of quality and at least so the B.C.E.The institute offers full-time Bachelor of Technology (B.Tech) degree programs in disciplines of science and technology viz. Computer Science & Engineering, Electronics & Communication Engineering, Electrical Engineering, and Mechanical Engineering, Civil Engineering.
+			</p>
+		</div>
+	</div>
+	<div id="timeline" class="container-fluid page white">
+		<div class="container innerPage" style="display: flex; justify-content: center; flex-direction: column;">
+			<h1>Timeline</h1>
+			<div class="timelineInfo">
+				<div id="timelineGraphics">
+					<div class="blueCircle">
+						<i class="fas fa-keyboard"></i>
+					</div>
+					<div class="blueLine"></div>
+					<div class="blueCircle smallCircle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+					<div class="blueLine"></div>
+					<div class="blueCircle smallCircle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+					<div class="blueLine"></div>
+					<div class="blueCircle">
+						<i class="fas fa-address-card"></i>
+					</div>
+					<div class="blueLine"></div>
+					<div class="blueCircle smallCircle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+					<div class="blueLine"></div>
+					<div class="blueCircle smallCircle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+					<div class="blueLine"></div>
+					<div class="blueCircle">
+						<i class="fas fa-laptop-code"></i>
+					</div>
+				</div>
+				<div class="timelineText">
+					<div class="majorEv">Online Idea Submission</div>
+					<div class="blankEv"></div>
+
+					<div class="minorEv">Start Date - Not finalised </div>
+					<div class="blankEv"></div>
+					
+					<div class="minorEv">Deadline - Not finalised</div>
+					<div class="blankEv"></div>
+					
+
+					<div class="majorEv">Idea Screening</div>
+					<div class="blankEv"></div>
+					
+
+					<div class="minorEv">Screening Results - Not finalised</div>
+					<div class="blankEv"></div>
+					
+
+					<div class="minorEv">Confirm Participation - Not finalised</div>
+					<div class="blankEv"></div>
+					
+
+					<div class="majorEv">SBH begins - Not finalised</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="prizes" class="container-fluid page blue">
+		<div class="container innerPage">
+			<h1>Prizes</h1>
+			<div class="prizeList" style="display: flex; justify-content: space-between;">
+				<div class="prize" style="display: flex; flex-direction: column; align-items: center; width:25% ">
+					<img src="visuals/first.png">
+					<h1><i class="fas fa-rupee-sign"></i> 25,000</h1>					
+				</div>
+				<div class="prize" style="display: flex; flex-direction: column; align-items: center; width:25%">
+					<img src="visuals/second.png">	
+					<h1><i class="fas fa-rupee-sign"></i> 15,000</h1>				
+				</div>
+				<div class="prize" style="display: flex; flex-direction: column; align-items: center; width:25%">
+					<img src="visuals/third.png">			
+					<h1><i class="fas fa-rupee-sign"></i> 10,000</h1>		
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="timeline" class="container-fluid page white">
+		<div class="container innerPage">
+			<h1>Team</h1>
+		</div>
+	</div>
+
+	<div id="prizes" class="container-fluid page blue">
+		<div class="container innerPage">
+			<h1>Rules and Guidelines</h1>
+		</div>
+	</div>
+
+	<div id="timeline" class="container-fluid page white">
+		<div class="container innerPage">
+			<h1>FAQ</h1>
+		</div>
+	</div>
+
+	<div id="prizes" class="container-fluid page blue">
+		<div class="container innerPage">
+			<h1>Contact</h1>
+		</div>
+	</div>
+
+	<div id="timeline" class="container-fluid page white">
+		<div class="container innerPage">
+			<h1>Sponsors</h1>
+		</div>
+	</div>
+
+	<script src="resources/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
