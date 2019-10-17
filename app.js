@@ -56,23 +56,19 @@ app.get("/sbh/register", function(req, res){
 });
 
 app.post("/sbh/register", function(req, res){
-	// var save = true;
 	Team.find({teamName: req.body.teamName}, function(err, team){
 		if (err){
 			console.log("Something Went wrong");
 		} else {
 			if (team.length != 0){
-				// save = false;
-				console.log(team.length);
-				res.send("<h1>Team with the name " + req.body.teamName + " is already registered!<h1>");
+				res.render("teamNameError", {teamName: req.body.teamName});
 			} else {
 				Team.find({Email: req.body.email}, function(err, team1){
 				if (err){
 					console.log("Something Went wrong");
 				} else {
 						if (team1.length != 0){
-							// save = false;
-							res.send("<h1>Email id " + req.body.email + " is already registered!</h1>");
+							res.render("emailError", {email: req.body.email});
 						} else {
 							saveToDb(req.body);
 							res.send("<h1> Team saved to Database </h1>")
@@ -81,15 +77,11 @@ app.post("/sbh/register", function(req, res){
 				});
 			}
 		}
-	});
-	
-	
-	
-			
+	});	
 });
 
-function saveToDb(obj){
 
+function saveToDb(obj){
 	var teamToBeAdded = new Team({
 		teamName: obj.teamName,
 		collegeName: obj.collegeName,
@@ -104,7 +96,6 @@ function saveToDb(obj){
 		ideaLink: obj.ideaLink,
 		ideaAbstract: obj.abstract
 	});
-
 	teamToBeAdded.save(function(err, teamSaved){
 		if (err){
 			console.log("Something went wrong!");
