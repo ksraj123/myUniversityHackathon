@@ -59,6 +59,9 @@ window.onload = function(){
 			makeAllInactive(lis);
 			lis[4].classList.add("active");
 		}
+		if (pageScoll[5] - scrollOffsetTop < scroll){
+			makeAllInactive(lis);
+		}
 
 
 		upDownvisi(pageScoll);
@@ -85,8 +88,24 @@ window.onload = function(){
 		} else {
 			document.querySelector("#overlay").classList.remove("overlay");
 		}
-	})
+	});
+
+	handleNavClicksFromOtherPages();
+	
 };
+
+function handleNavClicksFromOtherPages(){
+	if (window.location.hash != ""){
+		var navItems = document.querySelectorAll(".clickableNavItm");
+		console.log(navItems);	
+		setTimeout(() => {
+			navItems[Number(window.location.hash.slice(1))].click();
+			setTimeout(() => {
+				document.querySelector("#overlay").click();	
+			}, 1000)
+		}, 7500);
+	}
+}
 
 function upDownFunc(pageScoll, scrollOffsetTop){
 	var up = document.querySelector("#upBtn");

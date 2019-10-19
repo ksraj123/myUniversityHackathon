@@ -119,14 +119,16 @@ function saveToDb(obj, res){
 // ====================================================================
 // LOGIN Routes start here
 
-// show login form
-app.get("/sbh/login", function(req, res){
-
-});
-
 // forms submits to this route
 app.post("/sbh/login", function(req, res){
-
+	// res.send("Email = " + req.body.email + " password = " + req.body.password);
+	Team.find({email:req.body.email}, function(err, team){
+		if (team.length === 0 || team[0].password !== req.body.password){
+			res.render("unsuccessfulLogin");
+		} else {
+			res.render("successfulLogin");
+		}
+	})
 });
 
 // LOGIN Routes end here

@@ -23,6 +23,7 @@
 		}
 		#Error{
 			position: absolute;
+			z-index: -1;
 			top: 25%;
 			right: 50%;
 			transform: translateX(50%);
@@ -51,7 +52,11 @@
 <body>
 	<script src="/resources/jQuery.js"></script>
 
+	<script type="text/javascript">		var navInactive = true;	</script>
+
     <% include navbar %>
+
+    <div id="overlay"></div>
 
     <div id="outer">
     <div id="Error">

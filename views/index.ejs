@@ -1,6 +1,7 @@
 <% include partials/header %>
 
 <body>
+	<link href="https://fonts.googleapis.com/css?family=Long+Cang&display=swap" rel="stylesheet">
 
 	<script type="text/javascript">
 		console.log("here");
@@ -29,6 +30,8 @@
 	</div>
 
 	<div id="overlay"></div>
+
+	<script>	var navInactive = false;	</script>
 
 	<% include partials/navbar %>
 
@@ -149,35 +152,69 @@
 	</div>
 
 
-	<div id="timeline" class="container-fluid page white">
+	<div id="team" class="container-fluid page white uncompleted">
 		<div class="container innerPage">
 			<h1>Team</h1>
+			<div class="uncompletedMsg">
+				<h2>This page will contain info about our awesome team when the competition is live</h2>
+			</div>
 		</div>
 	</div>
 
-	<div id="prizes" class="container-fluid page blue">
+	<div id="rules" class="container-fluid page blue uncompleted">
 		<div class="container innerPage">
 			<h1>Rules and Guidelines</h1>
+			<div class="uncompletedMsg">
+				<h2>This page will contain Rules and Guidelines when the competition is live</h2>
+			</div>	
 		</div>
 	</div>
 
-	<div id="timeline" class="container-fluid page white">
+	<div id="faq" class="container-fluid page white uncompleted">
 		<div class="container innerPage">
 			<h1>FAQ</h1>
+			<div class="uncompletedMsg">
+				<h2>This page will contain FAQ when the competition is live</h2>
+			</div>	
 		</div>
 	</div>
 
-	<div id="prizes" class="container-fluid page blue">
+	<div id="contactUs" class="container-fluid page blue">
 		<div class="container innerPage">
 			<h1>Contact</h1>
 		</div>
 	</div>
 
-	<div id="timeline" class="container-fluid page white">
+	<div id="Sponsors" class="container-fluid page white uncompleted">
 		<div class="container innerPage">
 			<h1>Sponsors</h1>
+			<div class="uncompletedMsg">
+				<h2>This page will display our sponsors when the competition is live.</h2>
+			</div>
 		</div>
 	</div>
 
+	<style>
+		.uncompleted{
+			height: 100vh;
+		}
+
+		.uncompleted .uncompletedMsg{
+			height: 80%;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.uncompleted h2 {
+		    font-size: 2.5em;
+		    text-align: center;
+		    font-family: cursive;
+		    font-family: 'Long Cang', cursive;
+		}
+	</style>
+
 	
+
 <% include partials/footer %>

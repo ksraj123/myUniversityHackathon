@@ -13,7 +13,7 @@
 				<span class="icon-bar"></span>
 			</button>
 			<img id="navLogo" src="/visuals/smallbcelogo.png" height="100%" style="float: left;">
-			<a class="navbar-brand" href="#">BCE Bhagalpur</a>
+			<a class="navbar-brand" href="/sbh">BCE Bhagalpur</a>
 		</div>
 
 
@@ -47,14 +47,14 @@
 						aria-expanded="false">Login <span class="caret"></span></a>
 					<ul id="login-menu" class="dropdown-menu">
 						
-						<form>
+						<form action="/sbh/login" method="POST">
 							<div class="form-group">
-								<label for="exampleDropdownFormEmail1">Email address</label>
-								<input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Enter email here">
+								<label for="email">Email address</label>
+								<input type="email" name="email" class="form-control" id="email" placeholder="Enter email here">
 							</div>
 							<div class="form-group">
-								<label for="exampleDropdownFormPassword1">Password</label>
-								<input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Enter password">
+								<label for="password">Password</label>
+								<input type="password" name="password" class="form-control" id="password" placeholder="Enter password">
 							</div>
 							<button id="signIn" type="submit" class="btn btn-primary">Sign in</button>
 						</form>
@@ -66,3 +66,14 @@
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
 </nav>
+
+<script>
+	if (navInactive === true){
+		var navItems = [].slice.call(document.querySelectorAll(".clickableNavItm"));
+		navItems.forEach( (val, index) => {
+			val.addEventListener("click", () => {
+				window.location = "/sbh" + "#" + index;
+			}) 
+		})
+	}	
+</script>
