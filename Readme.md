@@ -1,2 +1,2 @@
-![](./images/mobile.png)
-![](./images/desktop.png)
+![](./docs/images/mobile.png)
+![](./docs/images/desktop.png)
